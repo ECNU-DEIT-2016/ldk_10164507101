@@ -1,0 +1,98 @@
+*{
+  font-family: "STHeiti","Microsoft YaHei";
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  line-height: 3em;
+}
+
+li:hover {
+  background-color: #EEEEEE;
+}
+
+li material-checkbox {
+  vertical-align: middle;
+}
+
+li material-fab {
+  float: right;
+  vertical-align: middle;
+}
+
+.done {
+  text-decoration: line-through;
+}
+/*
+#todo{
+  background-color: #CCC;
+}
+*/
+
+h2{
+  font-family: "STHeiti","Microsoft YaHei";
+  color:#0099CC;
+  font-size: 18px;
+  border-bottom: 2px dashed #0099CC;
+  border-left: 2px solid #0099CC;
+
+}
+
+button{
+  border-radius: 25px;
+  box-shadow: 3px 3px 3px #888;
+  width:160px;
+  height:30px;
+  font-size: 16px;
+  font-weight: bolder;
+  text-align: center;
+  border-color: white;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+/*--------------chips---------------*/
+#chips material-chip{
+  margin-right: 5px;
+  padding:0 5px 0 5px;
+  background-color:#0099CC;
+  font-family: "STHeiti","Microsoft YaHei";
+  color: white;
+  font-weight: bold;
+}
+#chips{
+  font-family: "STHeiti","Microsoft YaHei";
+  margin-top: -23px;
+  margin-left: 54px;
+}
+#chips span{
+  color:#0099CC;
+  font-weight: bold;
+}
+
+
+#occation{
+  font-size:  18px;
+}
+#occation input{
+  width:20px;
+  height: 20px;;
+  margin: 5px 0px 5px 0px;
+  margin-left: 20px;
+}
+
+#occation label{
+  display: inline-block;
+  margin-left: 17px;
+}
+
+#end{
+  margin-top:40px;
+  text-align: center;
+  font-size: 80%;
+  color:#CCC;
+}

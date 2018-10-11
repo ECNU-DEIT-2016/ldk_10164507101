@@ -1,0 +1,9 @@
+h1{
+    font-family: "Microsoft YaHei";
+    font-size: 20px;
+    text-align: left;
+}
+
+:host {
+    /* This is equivalent of the 'body' selector of a page. */
+}

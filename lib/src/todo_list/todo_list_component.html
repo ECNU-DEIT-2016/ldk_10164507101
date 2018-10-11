@@ -1,0 +1,202 @@
+<!-- Components info: https://webdev.dartlang.org/components -->
+
+<br />
+<!-- chips -->
+<div id="chips">
+    <material-chips >
+        <material-chip hasLeftIcon [removable]="false" >大学生</material-chip>
+        <material-chip hasLeftIcon [removable]="false">课外阅读</material-chip>
+        <material-chip hasLeftIcon [removable]="false">阅读</material-chip>
+        <material-chip hasLeftIcon [removable]="false">阅读习惯</material-chip>
+        <material-chip hasLeftIcon [removable]="false">...</material-chip>
+    </material-chips>
+</div>
+
+
+<material-tab-panel centerTabs>
+<material-tab label="简介">
+  <p>关于现代大学生阅读习惯于阅读情况的一些基本的调查，感谢您的参与！
+  </p>
+</material-tab>
+<material-tab label="更多详情">
+  <p>当今的大学生，沉迷手机的现象严重，另一方面，信息时代的不断发展，大学生有着更多更多获取信息的方式，早已不再局限于传统的书本，在这样的情况下，当代大学生对阅读的态度与习惯又是如何呢？</p>
+</material-tab>
+</material-tab-panel>
+
+
+
+<br />
+<h2>&nbsp;&nbsp;基本信息</h2>
+<h4><button disabled>您的性别是</button>&nbsp;(单选)</h4>
+<!-- radio -->
+<material-radio-group>
+    <material-radio>
+      <label>男</label>
+    </material-radio>
+    <br />
+    <material-radio>
+        <label>女</label>
+      </material-radio>
+</material-radio-group>
+
+<h4><button disabled>您的年级是</button>&nbsp;(单选)</h4>
+<!-- radio -->
+<material-radio-group>
+    <material-radio>
+      <label>大一</label>
+    </material-radio>
+    <br />
+    <material-radio>
+        <label>大二</label>
+      </material-radio>
+      <br />
+      <material-radio>
+      <label>大三</label>
+      </material-radio>
+       <br />
+      <material-radio>
+      <label>大四</label>
+       </material-radio>
+</material-radio-group>
+
+<h4><button disabled>您的专业是</button>&nbsp;(单选)</h4>
+<!-- radio -->
+<material-radio-group>
+    <material-radio>
+      <label>文科类</label>
+    </material-radio>
+    <br />
+    <material-radio>
+        <label>理工科类</label>
+      </material-radio>
+      <br />
+      <material-radio>
+      <label>艺术类</label>
+      </material-radio>
+</material-radio-group>
+
+
+<h2>&nbsp;&nbsp;阅读情况</h2>
+<h4><button disabled>是否喜欢阅读</button>&nbsp;(单选)</h4>
+<material-radio-group>
+    <material-radio>
+      <label>很讨厌</label>
+    </material-radio>
+    <material-radio>
+        <label>不喜欢</label>
+      </material-radio>
+      <material-radio>
+      <label>一般般</label>
+      </material-radio>
+      <material-radio>
+        <label>喜欢</label>
+        </material-radio>
+        <material-radio>
+        <label>书虫</label>
+        </material-radio>
+</material-radio-group>
+
+<h4><button disabled>阅读书的频率</button>&nbsp;(单选)</h4>
+<material-radio-group>
+    <material-radio>
+      <label>几乎不</label>
+    </material-radio>
+    <material-radio>
+        <label>几个月一本</label>
+      </material-radio>
+      <material-radio>
+      <label>一个月左右一本</label>
+      </material-radio>
+      <br />
+      <material-radio>
+        <label>每周一本</label>
+        </material-radio>
+        <material-radio>
+        <label>每周两本以上</label>
+        </material-radio>
+</material-radio-group>
+
+<h4><button disabled>会有列书单的习惯吗</button>&nbsp;(单选)</h4>
+<material-radio-group>
+    <material-radio>
+      <label>有</label>
+    </material-radio>
+    <br />
+    <material-radio>
+        <label>无</label>
+      </material-radio>
+ 
+</material-radio-group>
+
+<h4><button disabled>以下哪些情形会阅读</button>&nbsp;(多选)</h4>
+<div id="occation">
+  <input type="checkbox"><label>乘坐交通工具时</label><br />
+  <input type="checkbox"><label>进餐时</label><br />
+  <input type="checkbox"><label>需要查阅时</label><br />
+  <input type="checkbox"><label>惯性阅读</label><br />
+  <input type="checkbox"><label>其他</label>
+</div>
+
+<h4><button disabled>所喜欢阅读的类型</button>&nbsp;(多选)</h4>
+<div id="occation">
+  <input type="checkbox"><label>文学历史</label><br />
+  <input type="checkbox"><label>漫画轻小说</label><br />
+  <input type="checkbox"><label>言情小说</label><br />
+  <input type="checkbox"><label>工具书与教程书</label><br />
+  <input type="checkbox"><label>心灵鸡汤类</label><br />
+  <input type="checkbox"><label>报刊杂志散文类</label><br />
+  <input type="checkbox"><label>其他</label>
+</div>
+
+<h4><button disabled>您阅读的目的是</button>&nbsp;(多选)</h4>
+<div id="occation">
+  <input type="checkbox"><label>打发无聊的时间</label><br />
+  <input type="checkbox"><label>紧跟大众</label><br />
+  <input type="checkbox"><label>丰富精神世界，提升文化素养</label><br />
+  <input type="checkbox"><label>应付考试作业</label><br />
+  <input type="checkbox"><label>纯粹喜欢，没有太多理由</label>
+</div>
+
+
+
+
+<br /><br />
+ 
+  <h2>请留下您自己的见解</h2>
+  <br /><br />
+<div>
+    <material-input label="What else do you want to say?"
+                    autoFocus floatingLabel style="width:80%"
+                    [(ngModel)]="newTodo"
+                    (keyup.enter)="add()">
+    </material-input>
+  
+    <material-fab mini raised
+                  (trigger)="add()"
+                  [disabled]="newTodo.isEmpty">
+      <material-icon icon="add"></material-icon>
+    </material-fab>
+  </div>
+  
+ 
+  <p *ngIf="items.isEmpty">
+    Thank You!
+  </p>
+  
+  <div *ngIf="items.isNotEmpty">
+    <ul>
+        <li *ngFor="let item of items; let i=index">
+          <material-checkbox #done materialTooltip="Mark item as done">
+          </material-checkbox>
+          <span [class.done]="done.checked">{{item}}</span>
+          <material-fab mini (trigger)="remove(i)">
+            <material-icon icon="delete"></material-icon>
+          </material-fab>
+        </li>
+    </ul>
+  </div>
+ 
+<div id="end"> 
+  <br />
+  <footer>Copyright@copy2018 Kangkang.</footer>
+  </div>
