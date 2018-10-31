@@ -1,0 +1,57 @@
+<div id="take-attendance">
+    <div class="show-zone">
+        <img src="images/triangular.png" width="9">
+        <label>请输入点名人数<small>(学号范围默认下限为<em>{{lower_bound}}</em>,上限为<em>{{upper_bound}}</em>)</small>：
+        <span><material-input type="text" autoFocus floatingLabel style="width:8%"
+            [(ngModel)]="peoplenum"></material-input></span>
+        </label>
+    </div>
+
+    <div class="main-zone">
+
+        <div class="button-zone">
+            <button [disabled]="!isEmpty()" (click)="judgeNum()">点名</button>
+            <button (click)="tryModify()">修改范围</button>
+        </div>
+        <div class="radio-zone">
+            &nbsp;&nbsp;
+            <h3>结果排序与否</h3>
+            --<input name="sort" id="sorted" type="radio" checked><label>是</label>
+            --<input name="sort" id="not-sorted" type="radio" ><label>否</label>
+        </div>
+        <div class="warn" *ngIf="flag_warn">
+            <h3>请检查输入数据是否正确！最多人数：{{upper_bound-lower_bound+1}}</h3>
+        </div>
+        <div class="show" *ngIf="flag_show">
+            <ul>
+                <li *ngFor="let item of items; let i=index">
+                    <span>No.{{i+1}}: </span><span>{{item}}</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="modify" *ngIf="flag_modify">
+            <div class="row">
+                <img src="images/triangular.png" width="9">
+                <label>请输入新的学号下限：</label>
+                <material-input type="text" autoFocus floatingLabel style="width:12%" 
+                    [(ngModel)]="new_lower"></material-input>
+                <img src="images/triangular.png" width="9">
+                <label>请输入新的学号上限：</label>
+                <material-input type="text" autoFocus floatingLabel style="width:12%" 
+                    [(ngModel)]="new_upper"></material-input>
+            </div>
+            <button type="submit" (click)="judgeNewBound()">确认修改</button>
+            <div class="warn" *ngIf="flag_correct!=0">
+                <label>输入有误！</label>
+                <label *ngIf="flag_correct==1">上下限不应相等！</label>
+                <label *ngIf="flag_correct==2">上限不应小于下限！</label>
+                <label *ngIf="flag_correct==3">上限不应为空！</label>
+                <label *ngIf="flag_correct==4">下限不应为空！</label>
+                <label *ngIf="flag_correct==5">您并未输入任何数据！</label>
+            </div>
+          
+        </div>
+
+    </div>
+</div>
